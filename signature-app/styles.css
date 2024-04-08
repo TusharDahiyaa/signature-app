@@ -26,10 +26,12 @@ option {
 #myCanvas {
   border: 5px double #555555;
 }
-/* 
+
 @media only screen and (max-width: 600px) {
-  #myCanvas {
-    width: 400px;
-    height: 300px;
+  .container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-} */
+}

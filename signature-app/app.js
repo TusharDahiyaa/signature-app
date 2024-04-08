@@ -9,7 +9,7 @@ const ctx = canvas.getContext("2d");
 ctx.imageSmoothingEnabled = true;
 
 if (document.body.clientWidth < 500) {
-  canvas.width = 400;
+  canvas.width = 380;
   canvas.height = 300;
 } else {
   canvas.width = 800;

@@ -1,0 +1,44 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+
+.bottom {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 70%;
+}
+
+input,
+select,
+option {
+  border: 2px solid #ccc;
+}
+
+select {
+  text-align: center;
+}
+
+#clearButton,
+#saveButton,
+#retrieveButton {
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+#myCanvas {
+  border: 5px double #555555;
+  margin: 10px auto;
+}

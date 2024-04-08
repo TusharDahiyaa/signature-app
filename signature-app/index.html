@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signature App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-stone-200 text-stone-950">
+    <h1 class="text-center text-5xl font-mono font-bold underline my-5">
+      Digital Signature App
+    </h1>
+    <p class="text-center text-3xl font-mono">Signature Without Hassle!</p>
+    <div class="container">
+      <pre class="text-center my-2 bg-zinc-300 w-fit mx-auto p-2">
+Signature will be downloaded with transparent background.
+Please select a background color if background is needed.</pre
+      >
+
+      <div class="top w-[60%]">
+        <div class="black">
+          <p>Text Color Picker</p>
+          <input
+            class="form-control bg-gray-500 h-8 px-2 border rounded w-40"
+            type="color"
+            id="colorPicker"
+          />
+        </div>
+        <div class="white">
+          <p>Background Color Picker</p>
+          <input
+            class="form-control bg-gray-500 h-8 px-2 border rounded w-40"
+            type="color"
+            id="canvasColor"
+          />
+        </div>
+        <div class="">
+          <p>Font Size</p>
+          <select
+            id="fontSizePicker"
+            class="bg-gray-500 font-mono font-semibold text-white h-8 px-2 border rounded w-40"
+          >
+            <option value="5">5px</option>
+            <option value="10">10px</option>
+            <option value="20">20px</option>
+            <option value="30">30px</option>
+            <option value="40">40px</option>
+            <option value="50">50px</option>
+          </select>
+        </div>
+      </div>
+      <canvas class="canvas" id="myCanvas" width="800" height="500"></canvas>
+      <div class="bottom w-[60%]">
+        <button
+          type="button"
+          class="py-2 bg-red-500 rounded w-52"
+          id="clearButton"
+        >
+          Clear
+        </button>
+        <button
+          type="button"
+          class="py-2 bg-green-700 rounded w-52"
+          id="saveButton"
+        >
+          Save & Download
+        </button>
+        <button
+          type="button"
+          class="py-2 bg-yellow-500 rounded w-52"
+          id="retrieveButton"
+        >
+          Retrieve Saved Signature
+        </button>
+      </div>
+    </div>
+    <p class="absolute bottom-0 left-[40%] text-2xl">
+      Made with ♥ by Tushar Dahiya
+    </p>
+    <script src="./app.js"></script>
+  </body>
+</html>

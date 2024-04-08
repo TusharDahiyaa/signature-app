@@ -79,3 +79,33 @@ retrieveButton.addEventListener("click", (e) => {
   canvas.height = img.height;
   ctx.drawImage(img, 0, 0, img.width, img.height);
 });
+
+// Mobile add listeners
+// Touch event listeners
+canvas.addEventListener("touchstart", (e) => {
+  isDrawing = true;
+  // For touch events, retrieve touch position relative to canvas
+  const rect = canvas.getBoundingClientRect();
+  lastX = e.touches[0].clientX - rect.left;
+  lastY = e.touches[0].clientY - rect.top;
+});
+
+canvas.addEventListener("touchmove", (e) => {
+  if (isDrawing) {
+    e.preventDefault(); // Prevent scrolling while drawing
+    const rect = canvas.getBoundingClientRect();
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(
+      e.touches[0].clientX - rect.left,
+      e.touches[0].clientY - rect.top
+    );
+    ctx.stroke();
+    lastX = e.touches[0].clientX - rect.left;
+    lastY = e.touches[0].clientY - rect.top;
+  }
+});
+
+canvas.addEventListener("touchend", () => {
+  isDrawing = false;
+});

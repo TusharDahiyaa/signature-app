@@ -8,19 +8,20 @@ const fontSize = document.getElementById("fontSizePicker");
 const ctx = canvas.getContext("2d");
 ctx.imageSmoothingEnabled = true;
 
+if (document.body.clientWidth < 500) {
+  canvas.width = 400;
+  canvas.height = 300;
+} else {
+  canvas.width = 800;
+  canvas.height = 500;
+}
+
 let isDrawing = false;
 
 colorPicker.addEventListener("change", (e) => {
   ctx.strokeStyle = e.target.value;
   ctx.fillStyle = e.target.value;
 });
-
-const scaleFactor = 2;
-
-canvas.width *= scaleFactor;
-canvas.height *= scaleFactor;
-
-ctx.scale(scaleFactor, scaleFactor);
 
 canvas.addEventListener("mousedown", (e) => {
   isDrawing = true;
@@ -52,11 +53,6 @@ canvasColor.addEventListener("input", (e) => {
 fontSize.addEventListener("change", (e) => {
   ctx.lineWidth = e.target.value;
 });
-
-ctx.scale(1 / scaleFactor, 1 / scaleFactor);
-
-canvas.width /= scaleFactor;
-canvas.height /= scaleFactor;
 
 clearButton.addEventListener("click", (e) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);

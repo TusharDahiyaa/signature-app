@@ -5,29 +5,14 @@
   transform: translate(-50%, -50%);
 }
 
-.top {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  width: 70%;
-  margin: auto;
-}
-
-.bottom {
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto;
-  width: 70%;
-}
-
 input,
 select,
 option {
   border: 2px solid #ccc;
 }
 
-select {
+select,
+option {
   text-align: center;
 }
 
@@ -40,5 +25,11 @@ select {
 
 #myCanvas {
   border: 5px double #555555;
-  margin: 10px auto;
 }
+/* 
+@media only screen and (max-width: 600px) {
+  #myCanvas {
+    width: 400px;
+    height: 300px;
+  }
+} */
